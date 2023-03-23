@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -name '*.html' -type f -newer ../ -exec cp --no-clobber --parents {} ../ \;
+find . -maxdepth 1 -name '*.html' -type f -exec cp -u -t ../ {} +
